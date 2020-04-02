@@ -1,8 +1,11 @@
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-        <li data-target="#inSlider" data-slide-to="1"></li>
-    </ol>
+    {% if site.data.index.banners.size > 1 %}
+	<ol class="carousel-indicators">
+		{% for banner in site.data.index.banners %}
+			<li data-target="#inSlider" data-slide-to="{{forloop.index}}" {% if forloop.index == 1 %} class="active" {% endif %}></li>
+		{% endfor %}
+	</ol>
+    {% endif %}
     <div class="carousel-inner" role="listbox">
 
         <div class="item active">

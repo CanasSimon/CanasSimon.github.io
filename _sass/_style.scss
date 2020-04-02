@@ -1422,7 +1422,7 @@ code {
 }
 
 .gray-bg {
-  background-color: #f3f3f4;
+  background-color: #282a36;
 }
 
 .white-bg {
@@ -2452,10 +2452,6 @@ body {
       color: inherit;
     }
     .navbar-brand {
-      &:focus, &:hover {
-        background: #3385FF;
-        color: #3385FF;
-      }
       color: #fff;
       height: auto;
       display: block;

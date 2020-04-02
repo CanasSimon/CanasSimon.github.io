@@ -6,7 +6,7 @@ desc: "Quick test on writing code snippets in a blog post"
 keywords: "Canas,Simon,gh-pages,website,blog,easy"
 categories: [Programming]
 tags: [Programming,Engine]
-icon: icon-cplusplus
+icon: icon-cplusplus 
 ---
 
 This is a raw snippet:

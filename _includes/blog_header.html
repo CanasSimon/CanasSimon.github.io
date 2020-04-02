@@ -21,14 +21,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a>
+				<!-- Home page button -->
+                <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">{{ site.home_text }}</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll" href="{{ "blog/" | prepend: site.baseurl }}">{{ site.index.home }}</a></li>
-                    {% for tag in site.data.blog %}
+					<!-- Probably useless -->
+					<!-- <li><a class="page-scroll" href="{{ "blog/" | prepend: site.baseurl }}">{{ site.index.home }}</a></li> -->
+                    
+					<!-- Header buttons -->
+					{% for tag in site.data.blog %}
                         {% if tag.name != 'Donate' or site.donation %}
-                        {% if page.title == tag.name %}
+                        {% if page.title == tag.name or page.title == tag.alias %}
                         <li class="active">
                         {% else %}
                         <li>

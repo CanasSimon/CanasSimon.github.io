@@ -13,13 +13,13 @@
 
   <title>
     {% if page.title != "index" %}
-        {{ site.title }}|{{ page.title }}
+        {{ site.title }} | {{ page.title }}
     {% else %}
         {{ site.title }}
     {% endif %}
   </title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.jpg" | prepend: site.baseurl }}">
 
   <!-- Main CSS -->
   <link href="{{ "/static/assets/app-20180125.min.css" | prepend: site.baseurl }}" rel="stylesheet">

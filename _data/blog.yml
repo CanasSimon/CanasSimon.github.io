@@ -1,13 +1,14 @@
 # blog page sections
-- name: Blog
+- name: Index
+  alias: Blog
   href: /blog/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
 - name: Programming
-  href: /programming/
+  href: /blog/programming/
 
 - name: Life
-  href: /life/
+  href: /blog/life/
 
 # Don't display donation page: change donation to off at file '_config.yml'
 - name: Donate

@@ -13,10 +13,10 @@
   page: blog/
   css: testimonials navy-section
 
-- id: career
-  i18n: nav.career
-  name: Career
-  tpl: career.html
+- id: timeline
+  i18n: nav.timeline
+  name: Timeline
+  tpl: timeline.html
   css: timeline
 
 - id: skills

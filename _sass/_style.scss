@@ -2404,7 +2404,7 @@ body {
   }
   .navbar-default {
     &.navbar-scroll {
-      background-color: #fff;
+      background-color: #282a36;
       border-color: #fff;
       padding: 15px 0;
     }
@@ -2454,9 +2454,9 @@ body {
     .navbar-brand {
       &:focus, &:hover {
         background: #3385FF;
-        color: #44475a;
+        color: #3385FF;
       }
-      color: #44475a;
+      color: #fff;
       height: auto;
       display: block;
       font-size: 14px;
@@ -2623,7 +2623,7 @@ body {
     padding: 20px 0;
   }
   .gray-section {
-    background: #17181f;
+    background: #282a36;
     margin-top: 60px;
   }
   .team-member {
@@ -2659,7 +2659,7 @@ body {
     background-image: url(../assets/img/landing/avatar_all.png);
   }
   .contact {
-    background-color: #17181f;
+    background-color: #282a36;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     margin-top: 60px;

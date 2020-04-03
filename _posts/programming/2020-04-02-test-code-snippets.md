@@ -5,7 +5,7 @@ date:   2020-03-02
 desc: "Quick test on writing code snippets in a blog post"
 keywords: "Canas,Simon,gh-pages,website,blog,easy"
 categories: [Programming]
-tags: [Programming,Engine]
+tags: [Programming,Test]
 icon: icon-cplusplus 
 ---
 

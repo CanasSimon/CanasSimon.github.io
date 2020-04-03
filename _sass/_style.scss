@@ -1164,7 +1164,7 @@ label.error {
       font-size: 18px;
     }
     p {
-      font-size: 13px;
+      font-size: 16px;
     }
   }
 }
@@ -1195,7 +1195,7 @@ label.error {
       width: 100%;
       left: 122%;
       top: 2px;
-      font-size: 14px;
+      font-size: 16px;
     }
     .vertical-timeline-block:nth-child(even) .vertical-timeline-content {
       &::before {
@@ -1220,7 +1220,7 @@ label.error {
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
-  font-size: 13px;
+  font-size: 16px;
   color: #fff;
   height: 100%;
 }
@@ -1422,6 +1422,10 @@ code {
 }
 
 .gray-bg {
+  background-color: #282a36;
+}
+
+.grayout {
   background-color: #282a36;
 }
 
@@ -1887,8 +1891,9 @@ ul.clear-list:first-child {
     color: #fff;
   }
   p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 26px;
+	text-align: justify;
   }
 }
 
@@ -1919,7 +1924,7 @@ ul.clear-list:first-child {
     border-bottom: 1px solid #e7eaec;
   }
   p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 18px;
   }
 }
@@ -1987,10 +1992,10 @@ ul.clear-list:first-child {
 
 .vote-info {
   color: #b4b6b8;
-  font-size: 12px;
+  font-size: 16px;
   a {
     color: #b4b6b8;
-    font-size: 12px;
+    font-size: 16px;
     margin-right: 10px;
     &:hover {
       color: #3385FF;
@@ -2374,18 +2379,39 @@ body {
   }
   section p {
     color: #aeaeae;
-    font-size: 13px;
+    font-size: 16px;
   }
   h1 {
     margin-top: 10px;
     font-size: 30px;
     font-weight: 200;
   }
+  table {
+	border: 2px solid #6272a4;
+  }
+  th, td {
+    border: 2px solid #6272a4;
+    padding: 5px;
+	text-align: center;
+  }
+  th {
+	background-color: #6272a4;
+  }
+  pre {
+	font-size: 16px;
+  }
   .navy-line {
     width: 120px;
     height: 1px;
     margin: 60px auto 0;
     border-bottom: 2px solid #3385FF;
+  }
+  .navy-line-no-margin {
+    width: 120px;
+    height: 1px;
+    margin: 2px auto 0;
+    border-bottom: 2px solid #3385FF;
+	margin-bottom: 25px;
   }
   .navbar-wrapper {
     position: fixed;
@@ -2725,7 +2751,7 @@ body {
     }
     .carousel-caption p {
       margin-bottom: 20px;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.4;
     }
   }
@@ -2754,7 +2780,7 @@ body {
       margin-top: 6px;
     }
     .navbar-default {
-      background-color: #fff;
+      background-color: #282a36;
       border-color: #fff;
       padding: 15px 0;
       .navbar-nav > .active > a:focus {

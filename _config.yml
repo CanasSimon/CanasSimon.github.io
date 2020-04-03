@@ -17,7 +17,7 @@ author:  # change following line to your infomation.
   name: Simon C.  # Be used at blog posts' author.
   first_name: Simon  # Be used at index page about me section.
   last_name: Canas  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.png  # upload your avatar at directory and edit it.
+  avatar: /static/assets/img/landing/avatar.webp  # upload your avatar at directory and edit it.
   github_username: CanasSimon  # Leave blank if you don't have now
   linkedin_id: simonf-canas # Leave blank if you don't have now
   facebook_username:  # Leave blank if you don't have now

@@ -113,22 +113,22 @@ table {
 <table> 
 	<tbody> 
 		<tr> 
-			<th>xmm0</th>
+			<th>rdi</th>
 			<td>y1</td>
 			<td>x1</td>
 		</tr> 
 		<tr> 
-			<th>xmm1</th>
+			<th>rsi</th>
 			<td class="grayout"></td>
 			<td>z1</td>
 		</tr> 
 		<tr> 
-			<th>xmm2</th>
+			<th>rdx</th>
 			<td>y2</td>
 			<td>x2</td>
 		</tr> 
 		<tr> 
-			<th>xmm3</th>
+			<th>rcx</th>
 			<td class="grayout"></td>
 			<td>z2</td>
 		</tr> 
@@ -142,22 +142,22 @@ The goal would be to obtain this:
 <table> 
 	<tbody> 
 		<tr> 
-			<th>xmm0</th>
+			<th>rdi</th>
 			<td>x2</td>
 			<td>x1</td>
 		</tr> 
 		<tr> 
-			<th>xmm1</th>
+			<th>rsi</th>
 			<td>y2</td>
 			<td>y1</td>
 		</tr> 
 		<tr> 
-			<th>xmm2</th>
+			<th>rdx</th>
 			<td>z2</td>
 			<td>z1</td>
 		</tr> 
 		<tr> 
-			<th>xmm3</th>
+			<th>rcx</th>
 			<td class="grayout"></td>
 			<td class="grayout"></td>
 		</tr> 

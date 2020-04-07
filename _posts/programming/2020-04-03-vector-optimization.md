@@ -278,7 +278,7 @@ The first method is pretty straightforward: we make a for loop to calculate the 
 
 For the intrinsic method, we start by creating an array to store our result in and align it on the correct amount of bytes, because otherwise it might crash on some compilers. We then load the coordinates using **_mm_load_ps**. Next, we store the results of **_mm_mul_ps** and **_mm_add_ps** directly in the first argument because we won't be needing the value for later. Finally, **x1** is stored into the result array with **_mm_store_ps** which is then returned by the method.
 
-Funnily enough, I initially encountered errors when doing the same methods for **EightVec**s, when what I just needed what to change the **_mm** prefix (the prefix for SSE instructions) by **_mm256** (the prefix for AVX2 instructions)... simple as that.
+Funnily enough, I initially encountered errors when doing the same methods for **EightVec**s, when tge only thing I needed to change was the **_mm** prefix (the prefix for SSE instructions) by **_mm256** (the prefix for AVX2 instructions)... simple as that.
 
 For every size that is not 4 or 8, the regular dot should be called, otherwise it will throw an error.
 

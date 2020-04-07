@@ -267,8 +267,8 @@ inline std::array<float, 4> FourVec3f::DotIntrinsics(FourVec3f v1, FourVec3f v2)
     y1 = _mm_mul_ps(y1, y2); //Multiplies all the values of v1.ys by those of v2.ys and stores them back into y1 since we don't need it's value anymore.
     z1 = _mm_mul_ps(z1, z2); //Multiplies all the values of v1.zs by those of v2.zs and stores them back into z1 since we don't need it's value anymore.
 
-    x1 = _mm_add_ps(x1, y1); //Adds all the values of x1 with those of y1 and stores them back into z1 since we don't need it's value anymore.
-    x1 = _mm_add_ps(x1, z1); //Adds all the values of x1 with those of z1 and stores them back into z1 since we don't need it's value anymore.
+    x1 = _mm_add_ps(x1, y1); //Adds all the values of x1 with those of y1 and stores them back into x1 since we don't need it's value anymore.
+    x1 = _mm_add_ps(x1, z1); //Adds all the values of x1 with those of z1 and stores them back into x1 since we don't need it's value anymore.
     _mm_store_ps(result.data(), x1); //Stores the result into the "result" array, so that we can return and use the values of x1.
     return result;
 }

@@ -320,4 +320,4 @@ We can also notice that, even though the gap is bigger, the difference in time b
 
 I think I learned a lot on how data is handled on the hardware part and how to optimize my data so that the CPU can exert its full power. I got to be more familiar with the concept of AoS, SoA and AoSoA as well as the use of intrinsics commands to handle big chunks of data.
 
-Overhaul, it made me more sensitive to how I code things.
+Overall, it made me more sensitive to how I code things.

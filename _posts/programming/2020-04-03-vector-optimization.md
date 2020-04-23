@@ -17,8 +17,8 @@ They are necessary to represent the position, rotation and scale of objects, phy
 	Representation of the position, rotation and scale of a 3D cube using vectors. 
 </center> <br>
 <center>
-	<img src="matrix+reflection.webp" width="60%"> <br>
-	Representation of a 3D row-based matrix, and of a 2D vector reflection using vectors.
+	<img src="matrix+reflection.webp" width="20%"> <br>
+	Representation of a 2D vector reflection using vectors.
 </center> <br>
 Matrices are very often used to calculate the rotation of objects and the camera, or even to represent the position, rotation and scale of an object instead of using three different variables for them.
 Reflections are essential for any physics engine, since they are used to determine the direction of the bounce when two objects collide between each others.
@@ -103,68 +103,21 @@ When I presented my work on the first week, apart from other minor mishaps on my
 
 Vectors have one small flaw in every implementation: a singular vector coordinates are aligned, but when operations with multiple vectors are at play, the values are not aligned in the fastest way possible.
 
-For example, if we look at those register entries:
+For example, if we look at how the vectors are stored in memory:
 
-<style>
-table {
-  width: 25%;
-}
-</style>
-<table> 
-	<tbody> 
-		<tr> 
-			<th>rdi</th>
-			<td>y1</td>
-			<td>x1</td>
-		</tr> 
-		<tr> 
-			<th>rsi</th>
-			<td class="grayout"></td>
-			<td>z1</td>
-		</tr> 
-		<tr> 
-			<th>rdx</th>
-			<td>y2</td>
-			<td>x2</td>
-		</tr> 
-		<tr> 
-			<th>rcx</th>
-			<td class="grayout"></td>
-			<td>z2</td>
-		</tr> 
-	</tbody>
-</table>
+<center>
+	<img src="table first.gif" width="60%"> <br>
+</center> <br>
 
-As you can see, the x, y and z coordinates of the two vectors are not aligned together, and there also some wasted space in the registers.
+As you can see, the x, y and z coordinates of the two vectors are not aligned together.
 
 The goal would be to obtain this:
 
-<table> 
-	<tbody> 
-		<tr> 
-			<th>rdi</th>
-			<td>x2</td>
-			<td>x1</td>
-		</tr> 
-		<tr> 
-			<th>rsi</th>
-			<td>y2</td>
-			<td>y1</td>
-		</tr> 
-		<tr> 
-			<th>rdx</th>
-			<td>z2</td>
-			<td>z1</td>
-		</tr> 
-		<tr> 
-			<th>rcx</th>
-			<td class="grayout"></td>
-			<td class="grayout"></td>
-		</tr> 
-	</tbody>
-</table>
+<center>
+	<img src="table goal.gif" width="60%"> <br>
+</center> <br>
 
-Space is used more efficiently and every coordinates are correctly aligned together.
+Coordinates are correctly aligned together.
 
 After some more pointers given by my teacher, it became clear what more I could do: using **Structure of Arrays** (SoA) and **Array of Structures of Array** (AoSoA) instead of **Array of Structures** (AoS).
 
@@ -285,7 +238,7 @@ For every size that is not 4 or 8, the regular dot should be called, otherwise i
 Here's a graph of the benchmark of my Dot methods done on Windows 10, with an Intel i7-4790K@4.00GHZ CPU, compiled with MSVC v16.4.
 
 <center>
-	<img src="graph_benchmark.webp" width="75%"> <br>
+	<img src="graph_benchmark.webp" width="50%"> <br>
 	Graph representation the time taken for each Dot method for a table growing from 4 to 1024 Dot operations.
 </center> <br>
 
@@ -304,16 +257,16 @@ for (size_t j = 0; j < 8; ++j)
 
 **BM_DotIntrinsicsEightVec:** a benchmark of the the intrinsics version of Dot for EightVec3f.
 
-As we can see, the time taken by the NVec Dot methods is less than for the **Simple** version; the intrinsics version is even 3 times faster than the **Simple** one.
+As we can see, the time taken by the NVec Dot methods is less than for the **Simple** version; the intrinsics version is, however, only faster than the **Simple** one for the intrinsic FourVec version and when handling a very large amount of vectors for intrinsic EightVec.
 Let's see how much time we save on a more complex methods like Reflect() (for vector reflections):
 <center>
-	<img src="graph_reflect_benchmark.webp" width="75%"> <br>
+	<img src="graph_reflect_benchmark.webp" width="50%"> <br>
 	Graph representation the time taken for each Reflect method for a table growing from 4 to 1024 Reflect operations.
 </center> <br>
 
-Here, the reflect intrinsics method is even 5 to 7 times faster than the **Simple** one, which is a big improvement for a physics engine, because it means it can handle *that* many more collisions between objects, greatly improving its potential.
+We can see a similar trend on this methods, however the **ReflectFourVec** is this time much slower and using intrinsic EightVec is only slightly faster for very large amount of data.
 
-We can also notice that, even though the gap is bigger, the difference in time between FourVec3f and EightVec3f is *still* negligible. In other words, it takes *just about the same time* to make 4 and 8 Reflect operations using intrinsics, meaning that, for EightVec3f, it might be more than **14** times faster.
+This significant difference between EightVec and FourVec is likely due the cacheline. A FourVec3f has a size of 48 bytes which fits within the cacheline (64 bytes) whereas a EightVec3f (96 bytes) doesn't, hence why it's so much slower.
 
 <div class="navy-line-no-margin"></div>
 # Conclusion

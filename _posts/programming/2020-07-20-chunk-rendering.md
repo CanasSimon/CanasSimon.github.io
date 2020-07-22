@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chunk rendering in a minecraft-life game engine"
+title:  "Chunk rendering in a minecraft-like game engine"
 date:   2020-07-20
 desc: "My experience on optimizing the rendering of chunks in a minecraft-like engine using OpenGL ES 3.0 and SDL2."
 keywords: "Canas,Simon,gh-pages,website,blog,engine,chunk,minecraft"
@@ -9,7 +9,7 @@ tags: [Programming,Engine]
 icon: icon-cplusplus 
 ---
 
-For the end of my second year of study, my classmates and I have all been tasked on working on a small Minecraft-like project using the NekoEngine, a SDL2 based 3D game engine using OpenGL ES 3.0 programmed by our teacher in C++ that we've been working on for several months.
+For the end of my second year of study, my classmates and I have all been tasked on working on a small Minecraft-like project using the NekoEngine, a SDL2 based 3D game engine using OpenGL ES 3.0 developed by our teacher (<a href="https://eliasfarhan.ch/">Elias Fahran</a>) that we've been working on for several months.
 
 <div class="navy-line-no-margin"></div>
 
@@ -69,11 +69,14 @@ All of those operations allows us to only give the minimal amount of data to the
 # The result
 <center>
 	<img src="result.webp" width="80%" class="pixelated"> <br>
-	Final results with 169 completely filled chunks (4096 blocks) without using any performance saving technique like frustum or occlusion culling. <br>
-	Run on Windows 10, with an Intel i7-4790K@4.00GHZ CPU and a GeForce GTX 970 GPU, compiled with MSVC v16.5.
+	Compiled with MSVC v16.5.
 </center> <br>
 
-Thanks to all this optimization, I am able to reach a stable 70 fps.
+Thanks to all this optimization, I am able to render 169 completely filled chunks (4096 blocks per chunks), without using any performance saving technique like frustum or occlusion culling, at a stable 70 fps on Windows 10, with an Intel i7-4790K@4.00GHZ CPU and a GeForce GTX 970 GPU.
+
 
 # Conclusion
 I learned several tricks during this project, notably how to reduce the memory usage on the GPU and how to squeeze every bit of performance out of it.
+
+This has also been quite an enriching experience in teamwork, since I had to organize my work around what my other classmates has done.
+

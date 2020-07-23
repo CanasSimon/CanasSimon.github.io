@@ -9,7 +9,7 @@ tags: [Programming,Engine]
 icon: icon-cplusplus 
 ---
 
-For the end of my second year of study, my classmates and I have all been tasked on working on a small Minecraft-like project using the NekoEngine, a SDL2 based 3D game engine using OpenGL ES 3.0 developed by our teacher (<a href="https://eliasfarhan.ch/">Elias Fahran</a>) that we've been working on for several months.
+For the end of my second year of study, my classmates and I have all been tasked on working on a small Minecraft-like project using the NekoEngine, a SDL2 based 3D game engine using OpenGL ES 3.0 developed by our teacher (<a href="https://eliasfarhan.ch/">Elias Farhan</a>) that we've been working on for several months.
 
 <div class="navy-line-no-margin"></div>
 

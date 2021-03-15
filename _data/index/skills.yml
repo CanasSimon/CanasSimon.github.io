@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: C++, Unity, Social
-percentage: 50, 60, 20
+aspects: C++, Unity, OpenGL, Vulkan
+percentage: 70, 80, 70, 50

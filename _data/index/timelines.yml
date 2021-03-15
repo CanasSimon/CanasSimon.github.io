@@ -7,7 +7,7 @@
     detail: The school I'm studying in.
     i18n: company_a_desc
   date:
-    detail: Sep. 2018
+    detail: Sep. 2018 - 2019
     i18n: company_a_date
   job:
     detail: Start of my first year of studies
@@ -15,21 +15,21 @@
   img: /static/assets/img/landing/sae.webp
 
 - date:
-    detail: Sep. 2019
+    detail: Sep. 2019 - 2020
     i18n: company_b_date
   job:
     detail: Start of my second year of studies
     i18n: company_b_job
   img: /static/assets/img/landing/sae.webp
-  present: true
   
 - date:
-    detail: Sep. 2020
+    detail: Sep. 2020 - 2021
     i18n: company_b_date
   job:
     detail: Start of my final year of studies
     i18n: company_b_job
   img: /static/assets/img/landing/sae.webp
+  present: true
   
 - date:
     detail: Sep. 2021

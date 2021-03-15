@@ -7,6 +7,13 @@
   repo: NekoEngine
   img: /static/assets/img/landing/neko.jpg
   desc: A game engine I am working on at my school.
+  
+- name: Aer Racers
+  i18n: aer_racers
+  gh_user: SAE-Institute-Geneva
+  repo: AerRacers
+  img: /static/assets/img/landing/aer-racers.webp
+  desc: A racing game that we're developing at my school.
 
 #- name: Google
 #  i18n: google

@@ -24,23 +24,24 @@ author:  # change following line to your infomation.
   twitter_username: FroustiesBowl  # Leave blank if you don't have now
   email: simonf.canas@gmail.com  # Leave blank if you don't have now
   cv: # An online CV can be printed as PDF, leave blank if you don't have now
+  
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: fa-chevron-left
-    - name: fa-coffee
+    - name: icon-archlinux
   skill_icon2:
     - name: icon-cplusplus
     - name: fa-chevron-right
-  desc: I am a game programmer.  # Describe yourself.
+  desc: I am an engine programmer.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-#  name: jalpc
+  name: canassimon-io
 
 # analytics
 ## google analytics
 ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  #id: UA-93473370-3
+  id: G-SR2MZH6D10
 
 ## google optimize
 go:

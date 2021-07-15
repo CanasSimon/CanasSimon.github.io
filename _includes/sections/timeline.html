@@ -13,12 +13,12 @@
                 <div class="vertical-timeline-block">
                     <div class="vertical-timeline-icon {% if timeline.present ==  true %} navy-bg-present {% else %} navy-bg {% endif %} wow rotateIn">
 						{% if timeline.img %}
-                        <img src="{{ timeline.img | prepend: site.baseurl }}" class="img-responsive img-circle" alt="">
+                        <img src="{{ '/static/assets/img/'  | prepend: site.baseurl }}{{ timeline.img }}" class="img-responsive img-circle" alt="">
 						{% else %}
                         <i class="fa {{ timeline.icon }}"></i>
 						{% endif %}
                     </div>
-                    <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+                    <div class="vertical-timeline-content {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
                         <h2><span data-i18n="timeline.{{ timeline.name.i18n }}">{{ timeline.name.detail }}</span></h2>
                         <p><span data-i18n="timeline.{{ timeline.desc.i18n }}">{{ timeline.desc.detail }} </span></p>
                         <span class="vertical-date"><span data-i18n="timeline.{{ timeline.date.i18n }}"> {{ timeline.date.detail }} </span>

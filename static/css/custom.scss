@@ -7,3 +7,45 @@
 @import "open_sans";
 @import "roboto";
 @import "style";
+
+.blur-image {
+	/* Add the blur effect */
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	
+	/* Full height */
+	height: 100%;
+	
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.blog-image {
+	background-image: url(../assets/img/landing/blog-bg.webp);
+	background-color: #282a36;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+		
+	/* Add the blur effect */
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	
+	/* Full height */
+	height: 268px;
+	width: fit-content
+}
+
+.img-project {
+	height: 281px;
+	width: 500px;
+}
+
+.img-smooth-corners {
+	border-radius: 5%;
+}
+
+.small-title {
+	font-size: 20px;
+}

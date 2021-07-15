@@ -1,40 +1,49 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+  
 - name:
     detail: SAE Institute
-    i18n: company_a
+    i18n: sae_institute
   desc:
-    detail: The school I'm studying in.
-    i18n: company_a_desc
+    detail: "The school I'm studying in."
+    i18n: sae_institute_desc
   date:
-    detail: Sep. 2018 - 2019
-    i18n: company_a_date
+    detail: Sep. 2021
+    i18n: sae_institute_year_3_date
   job:
-    detail: Start of my first year of studies
-    i18n: company_a_job
-  img: /static/assets/img/landing/sae.webp
-
-- date:
-    detail: Sep. 2019 - 2020
-    i18n: company_b_date
-  job:
-    detail: Start of my second year of studies
-    i18n: company_b_job
-  img: /static/assets/img/landing/sae.webp
-  
-- date:
-    detail: Sep. 2020 - 2021
-    i18n: company_b_date
-  job:
-    detail: Start of my final year of studies
-    i18n: company_b_job
-  img: /static/assets/img/landing/sae.webp
+    detail: "Last year of my studies, obtaining my Bachelor of Science"
+    i18n: sae_institute_year_3_desc
+  img: landing/sae.webp
   present: true
   
 - date:
-    detail: Sep. 2021
-    i18n: company_b_date
+    detail: May. 2021
+    i18n: aer_racers_date
   job:
-    detail: End of my studies
-    i18n: company_b_job
-  img: /static/assets/img/landing/sae.webp
+    detail: "Release of Aer Racers"
+    i18n: aer_racers_desc
+  img: timeline/aer-racers.webp
+  
+- date:
+    detail: Jul. 2020
+    i18n: minecraft_date
+  job:
+    detail: "Release of the Minecraft-Like prototype"
+    i18n: minecraft_desc
+  img: timeline/minecraft.webp
+  
+- date:
+    detail: Dec. 2018
+    i18n: cosmyx_date
+  job:
+    detail: "My first Unity game"
+    i18n: cosmyx_desc
+  img: timeline/cosmyx.webp
+  
+- date:
+    detail: Sep. 2018
+    i18n: sae_institute_year_1_date
+  job:
+    detail: "Start of my studies"
+    i18n: sae_institute_year_1_desc
+  img: landing/sae.webp

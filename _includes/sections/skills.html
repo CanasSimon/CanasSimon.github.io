@@ -16,7 +16,7 @@
             labels: "{{ site.data.index.skills.aspects }}".split(","),
             datasets: [{
                 label: "{{ site.data.index.skills.label }}",
-                backgroundColor: "rgba(179,181,198,0.2)",
+                backgroundColor: "rgba(179, 181, 198, 0.2)",
                 borderColor: "#3385FF",
                 pointBackgroundColor: "#3385FF",
                 pointBorderColor: "#fff",
@@ -31,9 +31,14 @@
             options: {
                 scale: {
                     responsive: true,
-                    ticks: {min: 0, max: 100},
+                    ticks: { min: 0, max: 100, display: false },
                     lineArc: false,
-                    pointLabels: {fontSize: 16},
+                    gridLines: { color: "#50546a" },
+                    pointLabels: 
+                    {
+                    	fontSize: 16,
+                    	fontColor: "#fff"
+                    },
                 },
                 legend: {display: false},
             }

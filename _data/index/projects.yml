@@ -1,22 +1,69 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+# Neko
 - name: NekoEngine
   i18n: neko_engine
+  tooltip: "Link to the Github repo"
   gh_user: EliasFarhan
   repo: NekoEngine
-  img: /static/assets/img/landing/neko.jpg
-  desc: A game engine I am working on at my school.
+  img: projects/neko.webp
+  img_desc: "Look at this cute cat"
+  desc: "A 3D game engine made by Elias Fahran (my teacher), on which I worked <br> I'm sorry, there are no cats"
+  links:
+  - url: "https://eliasfarhan.ch/"
+    desc: "My teacher's website"
+  - url: "https://canassimon.github.io/blog/programming/2020/04/03/vector-optimization"
+    desc: "A blogpost on my implementation of vectors in the engine"
   
-- name: Aer Racers
-  i18n: aer_racers
+# Vulkan
+- name: My custom Vulkan-based Graphics Engine
+  i18n: vulkan_engine
+  tooltip: "Link to the Aer Racers' Github page, which also contain my work. I am working on porting my work into a dedicated Github page after having finished my Bachelor"
   gh_user: SAE-Institute-Geneva
   repo: AerRacers
-  img: /static/assets/img/landing/aer-racers.webp
-  desc: A racing game that we're developing at my school.
-
-#- name: Google
-#  i18n: google
-#  url: https://google.com
-#  img: /static/assets/img/landing/google.png
-#  desc: This is another project.
+  img: projects/vulkan.webp
+  img_desc: "A Vulkan logo"
+  desc: "My first attempt at creating a Vulkan-based graphics engine <br> Should've been used in Aer Racers, but ended up being too hard to maintain"
+  links:
+  - url: "https://canassimon.github.io/blog/programming/2021/05/07/creating-a-vulkan-engine"
+    desc: "First blogpost, describing the first steps in creating the engine"
+  - url: "https://canassimon.github.io/blog/programming/2021/05/07/integrating-a-vulkan-engine"
+    desc: "Second blogpost, describing how I adapted my implementation for the NekoEngine"
+  
+# Aer Racers
+- name: Aer Racers
+  i18n: aer_racers
+  url: "https://github.com/SAE-Institute-Geneva/AerRacers/releases/tag/1.1"
+  tooltip: "Link to the Release download"
+  gh_user: SAE-Institute-Geneva
+  repo: AerRacers
+  img: projects/aer-racers.webp
+  img_desc: "The logo for our game"
+  desc: "A racing game that I co-developed with my classmates during my final year of study using the NekoEngine"
+  links:
+  - url: "https://canassimon.github.io/blog/programming/2021/05/07/postmortem-aer-racers"
+    desc: "Postmortem"
+  
+# Minecraft-Like
+- name: Minecraft-Like
+  i18n: minecraft_like
+  url: "https://github.com/LoshkinOleg/NekoEngine/releases/tag/1.1"
+  tooltip: "Link to the Release download"
+  gh_user: LoshkinOleg
+  repo: NekoEngine
+  img: projects/minecraft.webp
+  img_desc: "The logo for our game"
+  desc: "An experimental attempt to recreate a chunk rendering system similar to Minecraft's made during my second year with my classmates using the NekoEngine"
+  links:
+  - url: "http://127.0.0.1:4000/blog/programming/2020/07/20/chunk-rendering"
+    desc: "A blogpost on my work"
+  
+# Cosmyx
+- name: Cosmyx
+  i18n: cosmyx
+  url: "https://canassimon.itch.io/cosmyx"
+  tooltip: "Link to the itch.io page"
+  img: projects/cosmyx.webp
+  img_desc: "A screenshot of the game"
+  desc: "A very simple arcade-like shoot 'em up <br> My very first game made in Unity"

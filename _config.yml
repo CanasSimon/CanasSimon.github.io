@@ -27,12 +27,12 @@ author:  # change following line to your infomation.
   
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
-    - name: fa-chevron-left
+    - name: 
     - name: icon-archlinux
   skill_icon2:
     - name: icon-cplusplus
-    - name: fa-chevron-right
-  desc: I am an engine programmer.  # Describe yourself.
+    - name: 
+  desc: I am an engine and graphics programmer. <br> I have some Gameplay Programming experience.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.

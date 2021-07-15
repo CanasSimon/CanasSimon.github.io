@@ -2422,6 +2422,13 @@ body {
 		border-bottom: 2px solid #3385FF;
 		margin-bottom: 25px;
 	}
+	.navy-line-single {
+		width: 120px;
+		height: 1px;
+		margin: 2px auto 0;
+		border-bottom: 2px solid #3385FF;
+		margin-bottom: 2px;
+	}
 	.pixelated {
 		-ms-interpolation-mode: nearest-neighbor;
   		image-rendering: crisp-edges;
@@ -2692,7 +2699,7 @@ body {
 		padding-top: 80px;
 		padding-bottom: 90px;
 		background-color: #3385FF;
-		background-image: url(../assets/img/landing/avatar_all.png);
+		background-image: url(../assets/img/landing/blog-bg.webp);
 	}
 	.contact {
 		background-color: #282a36;

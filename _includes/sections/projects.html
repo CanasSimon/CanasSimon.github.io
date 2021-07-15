@@ -18,23 +18,35 @@
             <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
             {% endif %}
               <div class="team-member">
-                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
                   <h4>
                   {% if project.url %}
-                  <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                  <a href="{{ project.url }}" target="_blank" title="{{ project.tooltip }}"><span class="navy small-title">{{ project.name }}</span></a>
                   {% elsif project.repo %}
-                  <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                  <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank" title="{{ project.tooltip }}"><span class="navy small-title">{{ project.name }}</span></a>
                   {% else %}
-                  <span class="navy">{{ project.name }}</span>
+                  <span class="navy small-title">{{ project.name }}</span>
                   {% endif %}
                   </h4>
+    			  <div class="navy-line-no-margin"></div>
+                  <img src="{{ '/static/assets/img/' | prepend: site.baseurl }}{{ project.img }}" class="img-responsive img-project img-smooth-corners" title="{{ project.img_desc }}">
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
                   {% if project.repo %}
                   <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fa fa-star"></i> ...</a>&emsp;&emsp;
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fa fa-code-fork"></i> ...</a>
+                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star" title="See who stared the project"><i class="fa fa-star"></i> ...</a>&emsp;&emsp;
+                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network/members" class="btn btn-white btn-xs fork" title="See who forked the project"><i class="fa fa-code-fork"></i> ...</a>
                       <div style="height: 10px;"></div>
                   </div>
+                  {% endif %}
+                  {% if project.links %}
+        		  {% for link in project.links %}
+                  <p><a href="{{ link.url }}" target="_blank"><span class="navy">{{ link.desc }}</span></a></p>
+      			  {% endfor %}
+    			  <div class="row m-b-lg">
+    			      <div class="col-lg-12 text-center">
+    			          <div class="navy-line-single"></div>
+    			          <span data-i18n="projects.my_projects">Related links</span>
+    			      </div>
+    			  </div>
                   {% endif %}
               </div>
           </div>

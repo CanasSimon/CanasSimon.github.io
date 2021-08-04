@@ -3,6 +3,8 @@
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
             <h1><span data-i18n="projects.my_projects">My Projects</span></h1>
+            <span data-i18n="projects.my_projects">Clicking on the titles will lead you to the project / download page for each</span><br>
+            <span data-i18n="projects.my_projects">Additonal links with more info are available under each project</span>
         </div>
     </div>
     <div class="row">
@@ -28,7 +30,24 @@
                   {% endif %}
                   </h4>
     			  <div class="navy-line-no-margin"></div>
+                  {% if project.video %}
+                  <video controls class="img-project img-smooth-corners" title="{{ project.img_desc }}">
+				      <source src="{{ '/static/assets/videos/' | prepend: site.baseurl }}{{ project.video }}" type="video/webm">
+				      Sorry, your browser doesn't support embedded videos.
+				  </video>
+                  {% else %}
+                  {% if project.url %}
+      			  <a target="_blank" href="{{ project.url }}">
+                  	  <img src="{{ '/static/assets/img/' | prepend: site.baseurl }}{{ project.img }}" class="img-responsive img-project img-smooth-corners" title="{{ project.img_desc }}">
+      			  </a>
+                  {% elsif project.repo %}
+      			  <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}">
+                  	  <img src="{{ '/static/assets/img/' | prepend: site.baseurl }}{{ project.img }}" class="img-responsive img-project img-smooth-corners" title="{{ project.img_desc }}">
+      			  </a>
+                  {% else %}
                   <img src="{{ '/static/assets/img/' | prepend: site.baseurl }}{{ project.img }}" class="img-responsive img-project img-smooth-corners" title="{{ project.img_desc }}">
+                  {% endif %}
+                  {% endif %}
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
                   {% if project.repo %}
                   <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">

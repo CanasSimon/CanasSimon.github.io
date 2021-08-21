@@ -12,6 +12,8 @@
   img_desc: "Look at this cute cat"
   desc: "A 3D game engine made by Elias Fahran (my teacher), on which I worked <br> I'm sorry, there are no cats"
   links:
+  - url: "https://github.com/EliasFarhan/NekoEngine"
+    desc: "Link to the Github repo"
   - url: "https://eliasfarhan.ch/"
     desc: "My teacher's website"
   - url: "https://canassimon.github.io/blog/programming/2020/04/03/vector-optimization"
@@ -27,6 +29,8 @@
   img_desc: "A Vulkan logo"
   desc: "My first attempt at creating a Vulkan-based graphics engine <br> Should've been used in Aer Racers, but ended up being too hard to maintain"
   links:
+  - url: "https://github.com/CanasSimon/NekoGameEngine"
+    desc: "Link to my personal fork of the NekoEngine, which contains my work on Vulkan."
   - url: "https://canassimon.github.io/blog/programming/2021/05/07/creating-a-vulkan-engine"
     desc: "First blogpost, describing the first steps in creating the engine"
   - url: "https://canassimon.github.io/blog/programming/2021/05/07/integrating-a-vulkan-engine"
@@ -44,6 +48,8 @@
   img_desc: "The logo for our game"
   desc: "A racing game that I co-developed with my classmates during my final year of study using the NekoEngine"
   links:
+  - url: "https://github.com/SAE-Institute-Geneva/AerRacers/releases/tag/1.1"
+    desc: "Link to the Release download"
   - url: "https://canassimon.github.io/blog/programming/2021/05/07/postmortem-aer-racers"
     desc: "Postmortem"
   
@@ -59,6 +65,8 @@
   img_desc: "The logo for our game"
   desc: "An experimental attempt to recreate a chunk rendering system similar to Minecraft's made during my second year with my classmates using the NekoEngine"
   links:
+  - url: "https://github.com/LoshkinOleg/NekoEngine/releases/tag/1.1"
+    desc: "Link to the Release download"
   - url: "http://canassimon.github.io/blog/programming/2020/07/20/chunk-rendering"
     desc: "A blogpost on my work"
   
@@ -71,3 +79,6 @@
   video: projects/cosmyx.webm
   img_desc: "A screenshot of the game"
   desc: "A very simple arcade-like shoot 'em up <br> My very first game made in Unity"
+  links:
+  - url: "https://canassimon.itch.io/cosmyx"
+    desc: "Link to the itch.io page"
